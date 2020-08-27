@@ -1,6 +1,15 @@
 package com.mong.mongspring.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //system이 정하는 아이디
     private String name;
 
